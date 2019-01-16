@@ -3,6 +3,7 @@ package thelianuniverse.main.core.base.baseBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import thelianuniverse.main.util.ModData;
@@ -28,43 +29,43 @@ public class blockBase extends Block {
 
     public static CreativeTabs OrganicsBlocksTab = new CreativeTabs("Thelian Biology") {
         @Override
-        public ItemStack getTabIconItem() {
-            return null;
+        public ItemStack createIcon() {
+            return new ItemStack(Item.getItemFromBlock());
         }
     };
 
     public static CreativeTabs GeologyBlocksTab = new CreativeTabs("Thelian Geology") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return null;
+
+        public ItemStack createIcon() {
+            return new ItemStack(Item.getItemFromBlock());
         }
     };
 
     public static CreativeTabs DecorationsTab = new CreativeTabs("Thelian Decor") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return null;
+
+        public ItemStack createIcon() {
+            return new ItemStack(Item.getItemFromBlock());
         }
     };
 
     public static CreativeTabs MachineBlocksTab = new CreativeTabs("Thelian Machines") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return null;
+
+        public ItemStack createIcon() {
+            return new ItemStack(Item.getItemFromBlock());
         }
     };
 
     public static CreativeTabs TransportationTab = new CreativeTabs("Thelian Transportation") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return null;
+
+        public ItemStack createIcon() {
+            return new ItemStack(Item.getItemFromBlock());
         }
     };
 
     public static CreativeTabs MiscBlocksTab = new CreativeTabs("Thelian Miscellaneous Blocks") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return null;
+
+        public ItemStack createIcon() {
+            return new ItemStack(Item.getItemFromBlock());
         }
     };
 
@@ -72,10 +73,9 @@ public class blockBase extends Block {
     public blockBase(Material material, String name, float hardness, int creativeTab){
 
         super(material);
-        this.name = name;
         this.creativeTab = creativeTab;
         setHardness(hardness);
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab();
         ModData.BLOCKS.add(this);

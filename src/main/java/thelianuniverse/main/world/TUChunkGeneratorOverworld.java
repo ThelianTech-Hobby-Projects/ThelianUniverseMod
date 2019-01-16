@@ -2,6 +2,7 @@ package thelianuniverse.main.world;
 
 import java.util.Random;
 
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -10,31 +11,48 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-import thelianuniverse.main.core.blocks.fluids.blockWater;
-import thelianuniverse.main.core.init.ModBlocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+
+import thelianuniverse.api.main.Util.Logger;
+import thelianuniverse.api.main.world.TUWorld;
+import thelianuniverse.api.main.world.gen.TUChunkGenSettings;
+
 
 
 public class TUChunkGeneratorOverworld implements IChunkGenerator {
 
-    private Random random;
+
+    public final TUWorld tuWorld;
+    private final TUChunkGenSettings settings;
+    private Random rand;
     private World world;
+    private boolean mapFeaturesEnabled;
     private IBlockState seaBlockState;
     private IBlockState stoneBlockState;
-    private final boolean isMapFeaturesOn;
+    private NoiseGeneratorPerlin stoneNoiseGen;
+    private double[] stoneNoiseArray;
     private final double[] noiseArray;
 
     private static final double oneEighth = 0.125D;
     private static final double oneFourth = 0.25D;
 
 
-    public TUChunkGeneratorOverworld(World getWorld, long seed, boolean isMapFeaturesOn, String chunkSettingsProviderString) {
+    public TUChunkGeneratorOverworld(TUWorld tuWorld) {
 
-        this.world = getWorld;
-        this.isMapFeaturesOn = isMapFeaturesOn;
-        this.random = new Random(seed);
+        Logger.debug("Instantiating CPTUW using generator settings: {}", tuWorld.world().getWorldInfo().getGeneratorOptions());
 
+        this.tuWorld = tuWorld;
+        this.world = tuWorld.world();
+        this.settings = tuWorld.getGenSettings();
 
+        this.rand = new Random(tuWorld.seed());
+        this.tuWorld.setRandom(this.rand);
+        this.mapFeaturesEnabled = world.getWorldInfo().isMapFeaturesEnabled();
+
+        this.stoneNoiseGen = new NoiseGeneratorPerlin(this.rand, 4);
         this.noiseArray = new double[825];
 
         this.stoneBlockState =
@@ -48,9 +66,6 @@ public class TUChunkGeneratorOverworld implements IChunkGenerator {
         final ChunkPos chunkPos = new ChunkPos(chunkX, chunkZ);
         final BlockPos blockPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 
-        // Creates a Random Long for use with Generation
-        this.random.setSeed((long) chunkX * 341873128712L + (long) chunkZ * 132897987541L);
-
 
         //Creates the Primer
         ChunkPrimer cp = new ChunkPrimer();
@@ -60,7 +75,7 @@ public class TUChunkGeneratorOverworld implements IChunkGenerator {
 
         // A hand Over for Biome Block Decoration
         Biome[] biomes = this.world.getBiomeProvider().getBiomes(null, chunkX * 16, chunkZ * 16, 16, 16);
-        this.genBiomeBlockPlacement(chunkX, chunkZ, cp, biomes);
+        this.replacementBlocksBiome(chunkX, chunkZ, cp, biomes);
 
         //Get Structure Templates and add them
 
@@ -173,6 +188,57 @@ public class TUChunkGeneratorOverworld implements IChunkGenerator {
         }
     }
 
-    public void
+    public void replacementBlocksBiome(int chunkx, int chunkz, ChunkPrimer cp, Biome[] biomes) {
+
+        if (!net.minecraftforge.event.ForgeEventFactory.onReplaceBiomeBlocks(this, chunkx, chunkz, cp, this.world)) return; {
+
+            double d0 = 0.03125D;
+            this.stoneNoiseArray = this.stoneNoiseGen.getRegion(
+              this.stoneNoiseArray,(double)(chunkx * 16), (double)(chunkz * 16),
+              16, 16, d0 * 2.0D, d0 * 2.0D, d0 * 1.0D);
+
+            for (int lx = 0; lx< 16; ++lx) {
+
+                for (int lz = 0; lz < 16; ++lz) {
+
+                    Biome biome = biomes[lz + lx * 16];
+                    biome.genTerrainBlocks(this.world, this.rand, cp,chunkx * 16 + lx, chunkz * 16 + lz, this.stoneNoiseArray[lz + lx * 16]);
+                }
+            }
+        }
+    }
+
+    public void populate(int chunkX, int chunkZ) {
+
+        BlockFalling.fallInstantly = true;
+        ChunkPos cPos = new ChunkPos(chunkX, chunkZ);
+        BlockPos bPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
+
+        Biome biome = this.world.getBiome(bPos.add(16, 0, 16));
+
+        this.rand.setSeed(this.tuWorld.getChunkSeed(chunkX, chunkZ));
+        boolean hasVillageGenerated = false;
+
+        MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Pre(this, world, rand, chunkX, chunkZ,false));
+
+        if (this.mapFeaturesEnabled) {
+            if (settings.useMineShaftFeature) {
+
+            }
+            if (settings.useStrongholdFeature)  {
+
+            }
+            if (settings.useVillageFeature) {
+
+            }
+            if (settings.useTempleFeature) {
+
+            }
+            if (settings.useMonumentFeature) {
+
+            }
+        }
+
+    }
 
 }

@@ -28,42 +28,42 @@ public class itemBase extends Item {
     
     public static CreativeTabs MaterialsItemTab = new CreativeTabs("Thelian Materials") {
         @Override
-        public ItemStack getTabIconItem() {
-            return null;
+        public ItemStack createIcon() {
+            return new ItemStack();
         }
     };
     public static CreativeTabs ToolsItemTab = new CreativeTabs("Thelian Tools") {
         @Override
-        public ItemStack getTabIconItem() {
-            return null;
+        public ItemStack createIcon() {
+            return new ItemStack();
         }
     };
 
     public static CreativeTabs CombatTab = new CreativeTabs("Thelian Combat") {
         @Override
-        public ItemStack getTabIconItem() {
-            return null;
+        public ItemStack createIcon() {
+            return new ItemStack();
         }
     };
 
     public static CreativeTabs FoodsTab = new CreativeTabs("Thelian Food") {
         @Override
-        public ItemStack getTabIconItem() {
-            return null;
+        public ItemStack createIcon() {
+            return new ItemStack();
         }
     };
     
     public static CreativeTabs MedicalTab = new CreativeTabs("Thelian Medicine") {
         @Override
-        public ItemStack getTabIconItem() {
-            return null;
+        public ItemStack createIcon() {
+            return new ItemStack();
         }
     };
 
     public static CreativeTabs MiscTab = new CreativeTabs("Thelian Miscellaneous Items ") {
         @Override
         public ItemStack getTabIconItem() {
-            return null;
+            return new ItemStack();
         }
     };
     

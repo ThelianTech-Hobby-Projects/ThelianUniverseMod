@@ -9,18 +9,9 @@ import thelianuniverse.main.world.WorldTypeTU;
 
 public class TUBiomeProvider extends BiomeProvider {
 
-    public TUBiomeProvider(long seed, WorldType worldType, String chunkProviderSettings) {
-    //public TUBiomeProvider(TUWorld tuWorld) {
+    public TUBiomeProvider(TUWorld tuWorld) {
 
-        super();
-
-
+        super(tuWorld.world().getWorldInfo());
     }
-
-    public TUBiomeProvider(World world) {
-
-        this(world.getSeed(), world.getWorldInfo().getTerrainType(), world.getWorldInfo().getGeneratorOptions());
-    }
-
 
 }
