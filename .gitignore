@@ -24,7 +24,6 @@ settings.gradle
 
 # other
 eclipse
-research
 run
 inspiration
 # Compiled class file
@@ -50,6 +49,5 @@ inspiration
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-gradlew
 .github/CONTRIBUTING.md
 .github/ISSUE_TEMPLATE.md
