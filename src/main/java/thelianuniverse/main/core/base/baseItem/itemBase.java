@@ -62,7 +62,7 @@ public class itemBase extends Item {
 
     public static CreativeTabs MiscTab = new CreativeTabs("Thelian Miscellaneous Items ") {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack();
         }
     };
@@ -72,7 +72,7 @@ public class itemBase extends Item {
 
         this.name = name;
         this.creativeTab = creativeTab;
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab();
         ModData.ITEMS.add(this);

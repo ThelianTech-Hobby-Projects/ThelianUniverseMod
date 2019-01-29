@@ -8,6 +8,6 @@ public class fluidWater extends IFluid {
 
 
     public fluidWater(String fluidName, ResourceLocation still, ResourceLocation flowing) {
-        super(fluidName, new ResourceLocation(""), new ResourceLocation(""));
+        super("water", new ResourceLocation(""), new ResourceLocation(""));
     }
 }

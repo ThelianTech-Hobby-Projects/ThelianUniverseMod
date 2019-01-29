@@ -7,13 +7,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+
 
 import thelianuniverse.api.main.Util.IModelRegister;
 import thelianuniverse.main.util.ModData;
 
 public final class ModBlocks {
-
 
     public static void register(IForgeRegistry<Block> evt) {
 
