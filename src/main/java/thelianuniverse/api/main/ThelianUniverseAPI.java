@@ -7,6 +7,7 @@ import thelianuniverse.api.config.core.ThelianUniverseConfig;
 public class ThelianUniverseAPI {
 
     public static final String Thelian_ID = "thelianuniverse";
+    public static final String TU_WORLDTYPE_ID = "ThelianUniverse";
     private static Path configPath;
     private static ThelianUniverseConfig thelainConfig;
 
