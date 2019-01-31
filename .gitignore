@@ -14,13 +14,7 @@ out
 .idea
 
 # gradle
-build
-gradle
-.gradle
-gradlew
-gradlew.bat
-gradle.properties
-settings.gradle
+
 
 # other
 eclipse
