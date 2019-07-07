@@ -6,8 +6,10 @@ import thelianuniverse.api.main.block.IFluid;
 
 public class fluidWater extends IFluid {
 
+    public static final String fluidName = "saltwater";
+    public static final fluidWater instance = new fluidWater();
 
-    public fluidWater(String fluidName, ResourceLocation still, ResourceLocation flowing) {
-        super("water", new ResourceLocation(""), new ResourceLocation(""));
+    public fluidWater() {
+        super(fluidName, new ResourceLocation(""), new ResourceLocation(""));
     }
 }
