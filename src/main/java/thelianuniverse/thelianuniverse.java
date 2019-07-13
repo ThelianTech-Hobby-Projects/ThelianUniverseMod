@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import static thelianuniverse.api.main.ThelianUniverseAPI.Thelian_ID;
+import static thelianuniverse.api.ThelianUniverseAPI.Thelian_ID;
 import static thelianuniverse.thelianuniverse.*;
 
 import thelianuniverse.main.proxy.ClientProxy;

@@ -1,9 +1,9 @@
 package thelianuniverse.api.main.Util;
 
 
-import org.apache.logging.log4j.Level;
+import org.apache.logging.log4.Level;
 
-import thelianuniverse.api.main.ThelianUniverseAPI;
+import thelianuniverse.api.ThelianUniverseAPI;
 
 @UtilityClass
 public final class Logger {

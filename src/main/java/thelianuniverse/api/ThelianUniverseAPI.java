@@ -1,13 +1,18 @@
-package thelianuniverse.api.main;
+package thelianuniverse.api;
 
 import java.nio.file.Path;
 
 import thelianuniverse.api.config.core.ThelianUniverseConfig;
+import thelianuniverse.api.main.Util.UtilityClass;
 
-public class ThelianUniverseAPI {
+@UtilityClass
+public final class ThelianUniverseAPI {
 
+    public static final String TU_API_ID = "tuapi";
+    public static final String VERSION = "@API_VERSION@";
     public static final String Thelian_ID = "thelianuniverse";
-    public static final String TU_WORLDTYPE_ID = "ThelianUniverse";
+    public static final String TU_WORLDTYPE_ID = "THELIANUNIVERSE";
+
     private static Path configPath;
     private static ThelianUniverseConfig thelainConfig;
 
