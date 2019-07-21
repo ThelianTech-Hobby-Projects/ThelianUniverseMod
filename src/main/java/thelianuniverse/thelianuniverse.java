@@ -1,72 +1,49 @@
 package thelianuniverse;
 
 
+import net.minecraft.item.Item;
+
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import thelianuniverse.api.main.Util.Logger;
+import thelianuniverse.main.core.init.ModItems;
 import static thelianuniverse.api.ThelianUniverseAPI.Thelian_ID;
-import static thelianuniverse.thelianuniverse.*;
-
-import thelianuniverse.main.proxy.ClientProxy;
-import thelianuniverse.main.proxy.CommonProxy;
+import static thelianuniverse.thelianuniverse.MOD_ID;
 
 
-@Mod(
-		modid = MOD_ID,
-		name = MOD_NAME,
-		version = MOD_VERSION,
-		acceptableRemoteVersions = "*"
-)
-
+@Mod(MOD_ID)
 public final class thelianuniverse {
 				
 				public static final String MOD_ID = Thelian_ID;
-				public static final String MOD_NAME = "ThelianUniverse";
-				public static final String MOD_VERSION = "@MOD_VERSION@";
-				private static final thelianuniverse instance = new thelianuniverse();
-				@SidedProxy(serverSide = CommonProxy.LOCATION, clientSide = ClientProxy.LOCATION)
-				public static CommonProxy proxy;
+				public static thelianuniverse instance;
 				
-				private thelianuniverse() {
+				public thelianuniverse() {
+								instance = this;
+								
+								FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+								FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
+								
+								MinecraftForge.EVENT_BUS.register(this);
+				}
+				
+				private void setup(final FMLCommonSetupEvent event) {
+								Logger.info("Setup Commencing");
 				
 				}
 				
-				@Mod.InstanceFactory
-				public static thelianuniverse getInstance() {
-								
-								return instance;
+				private void clientRegistries(final FMLClientSetupEvent event) {
+				
 				}
 				
-				@EventHandler
-				public void preInit(FMLPreInitializationEvent event) {
-								
-								proxy.preInit(event);
-				}
+				@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+				public static class RegistryEvents {
 				
-				@EventHandler
-				public void init(FMLInitializationEvent event) {
-								
-								proxy.init(event);
-								
 				}
-				
-				@EventHandler
-				public void postInit(FMLPostInitializationEvent event) {
-								
-								proxy.postInit(event);
-				}
-				
-				@EventHandler
-				public void loadComplete(FMLLoadCompleteEvent event) {
-								
-								proxy.loadComplete();
-				}
-				
 				
 }
 

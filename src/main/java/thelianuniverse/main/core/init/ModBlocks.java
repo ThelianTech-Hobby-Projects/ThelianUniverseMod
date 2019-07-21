@@ -1,13 +1,10 @@
 package thelianuniverse.main.core.init;
 
 
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.registries.IForgeRegistry;
-
 import net.minecraft.block.Block;
 
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import thelianuniverse.api.main.Util.IModelRegister;
 import thelianuniverse.main.util.ModData;
@@ -22,7 +19,7 @@ public final class ModBlocks {
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    
     public static void modelsRegisters(ModelRegistryEvent evt) {
 
         for (Block block: ModData.BLOCKS) {

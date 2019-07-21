@@ -8,7 +8,7 @@ import thelianuniverse.main.core.base.baseBlock.baseFluidBlock;
 
 public class blockWater extends baseFluidBlock {
     public blockWater(Fluid fluid, Material material) {
-        super(fluid, material.WATER);
+        super(fluid, Material.WATER);
         this.setLightOpacity(0);
         this.setHardness(100.0F);
     }
