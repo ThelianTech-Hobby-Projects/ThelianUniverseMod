@@ -20,7 +20,6 @@ public final class thelianuniverse {
 				public thelianuniverse() {
 								instance = this;
 								
-								ItemGroupTU.init();
 								ModInit.init();
 								
 								
