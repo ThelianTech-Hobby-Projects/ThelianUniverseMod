@@ -1,4 +1,4 @@
-package thelianuniverse.main.core.init;
+package thelianuniverse.main.init;
 
 
 import java.io.IOException;
