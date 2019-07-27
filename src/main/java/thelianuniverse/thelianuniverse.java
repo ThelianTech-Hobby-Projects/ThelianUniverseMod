@@ -1,19 +1,11 @@
 package thelianuniverse;
 
 
-import net.minecraft.item.Item;
-
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import thelianuniverse.api.main.Util.Logger;
-import thelianuniverse.main.core.init.ModInit;
+import thelianuniverse.main.init.ModInit;
 import thelianuniverse.main.util.ItemGroupTU;
 import static thelianuniverse.api.ThelianUniverseAPI.Thelian_ID;
 
