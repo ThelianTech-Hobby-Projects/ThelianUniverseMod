@@ -1,4 +1,4 @@
-### Team-RTG Issue Report Template
+### ThelianInteractive Issue Report Template
 -------
 Before getting started, for the sake of everyone's sanity, be sure that you are opening an issue in the correct repository, and please fill out this document in full, the best that you can.
 
