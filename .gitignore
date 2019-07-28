@@ -1,3 +1,28 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+gradle
+gradlew.bat
+.gradle
+
+# other
+eclipse
+run
+inspiration
 # Compiled class file
 *.class
 
@@ -21,3 +46,5 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.github/CONTRIBUTING.md
+.github/ISSUE_TEMPLATE.md
