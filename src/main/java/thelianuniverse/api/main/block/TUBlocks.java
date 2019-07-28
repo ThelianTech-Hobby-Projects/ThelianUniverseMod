@@ -7,7 +7,7 @@ import net.minecraft.block.Block;
 public class TUBlocks {
 				
 				// Geology Blocks
-				  //Igneous
+				//Igneous
 				public static Block andesite;
 				public static Block basalt;
 				public static Block dacite;
@@ -18,7 +18,7 @@ public class TUBlocks {
 				public static Block pegmatite;
 				public static Block perdotite;
 				public static Block rhyolite;
-				  //metamorphic
+				//metamorphic
 				public static Block anthracite;
 				public static Block lapis_lazuli;
 				public static Block marble;
@@ -28,16 +28,16 @@ public class TUBlocks {
 				public static Block soap_stone;
 				public static Block schist;
 				public static Block slate;
-				  //sedimentary
-				public static Block ;
-				public static Block ;
-				public static Block ;
-				public static Block ;
-				public static Block ;
-				public static Block ;
-				public static Block ;
-				public static Block ;
-				public static Block ;
+				//sedimentary
+				public static Block chert;
+				public static Block coal;
+				public static Block dolomite;
+				public static Block conglomerate;
+				public static Block limestone;
+				public static Block sandstone;
+				public static Block rock_salt;
+				public static Block siltstone;
+				public static Block shale;
 				
 				//Biology Blocks
 }

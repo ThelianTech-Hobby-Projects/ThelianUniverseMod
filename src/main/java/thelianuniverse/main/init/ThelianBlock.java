@@ -18,7 +18,7 @@ import static thelianuniverse.api.main.block.TUBlocks.*;
 
 public class ThelianBlock {
 				
-				public static int groupSwitch;
+				protected static int groupSwitch;
 				
 				public static void init() {
 								
@@ -35,28 +35,28 @@ public class ThelianBlock {
 									*/
 								
 								// Lets Register Geology Blocks Here
-								  //Igneous
-								andesite = registerBlock();
-								basalt = registerBlock();
-								dacite = registerBlock();
-								diorite = registerBlock();
-								gabbro = registerBlock(new blockIgneous(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5f,1.0f).sound(SoundType.STONE)), "gabbro", 0);
-								granite = registerBlock();
-								obsidian = registerBlock();
-								pegmatite = registerBlock();
-								perdotite = registerBlock();
-								rhyolite = registerBlock();
-								  //Metamorphic
-								anthracite = registerBlock();
-								lapis_lazuli = registerBlock();
-								marble = registerBlock();
-								novaculite = registerBlock();
-								quartzite = registerBlock();
-								phyllite = registerBlock();
-								soap_stone = registerBlock();
-								schist = registerBlock();
-								slate = registerBlock();
-								  //sedimentary
+								//Igneous
+								andesite = registerBlock(new blockIgneous(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5f, 1.0f).sound(SoundType.STONE)), "andesite", 0);
+							//	basalt = registerBlock();
+							//	dacite = registerBlock();
+							//	diorite = registerBlock();
+								gabbro = registerBlock(new blockIgneous(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5f, 1.0f).sound(SoundType.STONE)), "gabbro", 0);
+								//granite = registerBlock();
+							//	obsidian = registerBlock();
+							//	pegmatite = registerBlock();
+							//	perdotite = registerBlock();
+							//	rhyolite = registerBlock();
+								//Metamorphic
+						//		anthracite = registerBlock();
+						//		lapis_lazuli = registerBlock();
+						//		marble = registerBlock();
+						//		novaculite = registerBlock();
+						//		quartzite = registerBlock();
+						//		phyllite = registerBlock();
+						//		soap_stone = registerBlock();
+						//		schist = registerBlock();
+						//		slate = registerBlock();
+								//sedimentary
 								
 								//Lets Register Biology Blocks Here
 				}
@@ -80,7 +80,7 @@ public class ThelianBlock {
 								}
 				}
 				
-				public static Block registerBlock(Block b, String name,  int itemGroup) {
+				public static Block registerBlock(Block b, String name, int itemGroup) {
 								
 								groupSwitch = itemGroup;
 								BlockItem i = new BlockItem(b, new Item.Properties().group(setItemGroup()));
@@ -96,7 +96,7 @@ public class ThelianBlock {
 								b.setRegistryName(name);
 								ForgeRegistries.BLOCKS.register(b);
 								
-								if (i != null) {
+								if(i != null) {
 												i.setRegistryName(name);
 												ForgeRegistries.ITEMS.register(i);
 								}

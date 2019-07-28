@@ -6,15 +6,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import thelianuniverse.main.init.ModInit;
-import thelianuniverse.main.util.ItemGroupTU;
 import static thelianuniverse.api.ThelianUniverseAPI.Thelian_ID;
-
 
 
 @Mod(value = Thelian_ID)
 public final class thelianuniverse {
 				
-
+				
 				public static thelianuniverse instance;
 				
 				public thelianuniverse() {
