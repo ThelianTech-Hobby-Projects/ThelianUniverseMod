@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '00.00-prealpha.007'
+version = '00.00-prealpha.010'
 group = 'org.thelianinteractive.thelianuniverse' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'thelianuniverse'
 
