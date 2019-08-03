@@ -38,6 +38,15 @@ public class TUBlocks {
 				public static Block rock_salt;
 				public static Block siltstone;
 				public static Block shale;
+				//soil
+				public static Block soil_chalky;
+				public static Block soil_clay;
+				public static Block soil_loamy;
+				public static Block soil_peat;
+				public static Block soil_sandy;
+				public static Block soil_silty;
+				public static Block soil_top;
+				
 				
 				//Biology Blocks
 }
