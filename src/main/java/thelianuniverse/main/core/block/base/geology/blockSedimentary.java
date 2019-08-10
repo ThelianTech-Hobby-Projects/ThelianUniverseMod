@@ -1,4 +1,4 @@
-package thelianuniverse.main.core.block.base;
+package thelianuniverse.main.core.block.base.geology;
 
 
 import net.minecraft.block.Block;

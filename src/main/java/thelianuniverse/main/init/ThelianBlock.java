@@ -11,10 +11,8 @@ import net.minecraft.item.ItemGroup;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import thelianuniverse.main.core.block.base.blockIgneous;
-import thelianuniverse.main.core.block.base.blockMetamorphic;
-import thelianuniverse.main.core.block.base.blockSedimentary;
-import thelianuniverse.main.core.block.base.blockSoil;
+import thelianuniverse.main.core.block.base.geology.*;
+import thelianuniverse.main.core.block.base.biology.*;
 import thelianuniverse.main.util.ItemGroupTU.*;
 import static thelianuniverse.api.main.block.TUBlocks.*;
 
@@ -69,7 +67,7 @@ public class ThelianBlock {
 								rock_salt = registerBlock(new blockSedimentary(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.25f, 1.0f).sound(SoundType.STONE)), "rock_salt", 0);
 								siltstone = registerBlock(new blockSedimentary(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.25f, 1.0f).sound(SoundType.STONE)), "siltstone", 0 );
 								shale = registerBlock(new blockSedimentary(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.25f, 1.0f).sound(SoundType.STONE)), "shale", 0);
-								//soil
+								//Soil
 								soil_chalky = registerBlock(new blockSoil(Block.Properties.create(Material.EARTH, MaterialColor.DIRT).hardnessAndResistance(0.5f, 1.0f).sound(SoundType.GROUND)), "chalky_soil", 0);
 								soil_clay = registerBlock(new blockSoil(Block.Properties.create(Material.EARTH, MaterialColor.DIRT).hardnessAndResistance(0.5f, 1.0f).sound(SoundType.GROUND)), "clay_soil", 0);
 								soil_loamy = registerBlock(new blockSoil(Block.Properties.create(Material.EARTH, MaterialColor.DIRT).hardnessAndResistance(0.5f, 1.0f).sound(SoundType.GROUND)), "loamy_soil", 0);
@@ -77,6 +75,36 @@ public class ThelianBlock {
 								soil_sandy = registerBlock(new blockSoil(Block.Properties.create(Material.EARTH, MaterialColor.DIRT).hardnessAndResistance(0.5f, 1.0f).sound(SoundType.SAND)), "sandy_soil", 0);
 								soil_silty = registerBlock(new blockSoil(Block.Properties.create(Material.EARTH, MaterialColor.DIRT).hardnessAndResistance(0.5f, 1.0f).sound(SoundType.GROUND)), "silty_soil", 0);
 								soil_top = registerBlock(new blockSoil(Block.Properties.create(Material.EARTH, MaterialColor.GRASS).hardnessAndResistance(0.5f, 1.0f).sound(SoundType.GROUND)), "topsoil", 0);
+								//Ore
+								ore_bauxite = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "bauxite", 0);
+								ore_bismuth = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "bismite", 0);
+								ore_cadmium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "greenockite", 0);
+								ore_carbon = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "graphite", 0);
+								ore_chromium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "chromite", 0);
+								ore_cobalt = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "cobaltite", 0);
+								ore_copper = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "malachite", 0);
+								ore_rich_copper = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "tetrahedrite", 0);
+								ore_poor_copper = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "cuprite", 0);
+								ore_gold = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "", 0);
+								ore_bog_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "bogiron", 0);
+								ore_hematite_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "hematite", 0);
+								ore_limonite_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "limonite", 0);
+								ore_magnetite_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "magnetite", 0);
+								ore_siderite_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "siderite", 0);
+								ore_lead = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "galena", 0);
+								ore_lithium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "petalite", 0);
+								ore_manganese = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "pyrolusite", 0);
+								ore_mercury = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "cinnabar", 0);
+								ore_molybdenum = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "molybdenite", 0);
+								ore_nickel = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "ferrous", 0);
+								ore_osmium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "osmium", 0);
+								ore_platinum = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "platinum", 0);
+								ore_silver = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "argentite", 0);
+								ore_sulfur = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "sulfer", 0);
+								ore_tin = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "cassiterite", 0);
+								ore_titanium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "rutile", 0);
+								ore_uranium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "uraninite", 0);
+								ore_zinc = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "sphalerite", 0);
 								//Lets Register Biology Blocks Here
 				}
 				

@@ -46,8 +46,38 @@ public class TUBlocks {
 				public static Block soil_sandy;
 				public static Block soil_silty;
 				public static Block soil_top;
-				
-				
+				//ore
+				public static Block ore_bauxite; //aluminium
+				public static Block ore_bismuth; //bismite
+				public static Block ore_cadmium; //Greenockite
+				public static Block ore_carbon; //Graphite
+				public static Block ore_chromium; //chromite
+				public static Block ore_cobalt; //cobaltite
+				public static Block ore_copper; //malachite
+				public static Block ore_poor_copper; //tetrahedrite
+				public static Block ore_rich_copper; //cuprite
+				public static Block ore_gold;
+				public static Block ore_hematite_iron;
+				public static Block ore_magnetite_iron;
+				public static Block ore_limonite_iron;
+				public static Block ore_siderite_iron;
+				public static Block ore_bog_iron;
+				public static Block ore_lead; //Galena
+				public static Block ore_lithium; //petalite
+				public static Block ore_manganese; //pyrolusite
+				public static Block ore_mercury; //cinnabar
+				public static Block ore_molybdenum; //Molybdenite
+				public static Block ore_nickel; //ferrous
+				public static Block ore_osmium;
+				public static Block ore_perlite;
+				public static Block ore_platinum;
+				public static Block ore_silver; //argentite
+				public static Block ore_sulfur;
+				public static Block ore_tin;
+				public static Block ore_titanium;
+				public static Block ore_tungsten;
+				public static Block ore_uranium;
+				public static Block ore_zinc;
 				//Biology Blocks
 }
 
