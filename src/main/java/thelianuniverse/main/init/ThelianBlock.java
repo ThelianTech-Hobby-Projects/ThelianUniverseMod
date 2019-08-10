@@ -85,7 +85,7 @@ public class ThelianBlock {
 								ore_copper = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "malachite", 0);
 								ore_rich_copper = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "tetrahedrite", 0);
 								ore_poor_copper = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "cuprite", 0);
-								ore_gold = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "", 0);
+								ore_gold = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "gold", 0);
 								ore_bog_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "bogiron", 0);
 								ore_hematite_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "hematite", 0);
 								ore_limonite_iron = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "limonite", 0);

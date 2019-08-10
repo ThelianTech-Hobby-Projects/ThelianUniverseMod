@@ -38,6 +38,9 @@ public class ThelianConfig {
 								
 								ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, serverConfig.SPEC, "thelianuniverse/server.toml");
 								ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Main.SPEC, "thelianuniverse/main.toml");
+								ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ThelianBiomes.SPEC, "thelianuniverse/ThelianBiomes.toml");
+								ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ThelianCrafting.SPEC, "thelianuniverse/ThelianCrafting.toml");
+								ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ThelianTerrain.SPEC, "thelianuniverse/ThelianTerrain.toml");
 				}
 				
 				public static class Main {
@@ -49,13 +52,63 @@ public class ThelianConfig {
 								
 								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianDebug;
 								
+								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianBiomes;
+								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianCrafting;
+								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianTerrian;
+							
+								
+								
+								
+								
 								
 								static {
 												
 												BUILDER.comment("Main Config to Turn On or Off Modules of the mod");
 												BUILDER.push("Main");
-												BUILDER.comment("This is For Debugging the mod.");
-												ThelianDebug = BUILDER.comment("WARNING: DO NOT TURN ON UNLESS DIRECTED TO DO IT BY A MOD DEV!").define("ThelianDebug", false);
+												ThelianDebug = BUILDER.comment("This is used to debug the mod" +
+												"WARNING: DO NOT TURN ON UNLESS DIRECTED TO DO IT BY A MOD DEV!").define("ThelianDebug", false);
+												ThelianBiomes = BUILDER.comment("Activates Thelian Biomes Module").define("ThelianBiomes", false);
+												ThelianCrafting = BUILDER.comment("Activates Thelian Crafting Module").define("ThelianCrafting", false);
+												ThelianTerrian = BUILDER.comment("Activates Thelian Terrain Module").define("ThelianTerrian", false);
+												BUILDER.pop();
+												SPEC = BUILDER.build();
+								}
+				}
+				
+				public static class ThelianBiomes {
+								
+								public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+								public static final ForgeConfigSpec SPEC;
+								
+								static {
+												BUILDER.comment("Use this to Customized Thelian Biome settings");
+												BUILDER.push("Main");
+												BUILDER.pop();
+												SPEC = BUILDER.build();
+								}
+				}
+				
+				public static class ThelianCrafting {
+								
+								public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+								public static final ForgeConfigSpec SPEC;
+								
+								static {
+												BUILDER.comment("Use this to Customize the ThelianCrafting Module");
+												BUILDER.push("Main");
+												BUILDER.pop();
+												SPEC = BUILDER.build();
+								}
+				}
+				
+				public static class ThelianTerrain {
+								
+								public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+								public static final ForgeConfigSpec SPEC;
+								
+								static {
+												BUILDER.comment("Use this to Customize the ThelianTerrian Module");
+												BUILDER.push("Main");
 												BUILDER.pop();
 												SPEC = BUILDER.build();
 								}
@@ -66,7 +119,7 @@ public class ThelianConfig {
 								public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 								public static final ForgeConfigSpec SPEC;
 								
-								public static final ForgeConfigSpec.BooleanValue USEWORLDTYPE;
+								public static final ForgeConfigSpec.ConfigValue<Boolean> USEWORLDTYPE;
 								
 								static {
 												BUILDER.comment("Use this when running any server instance. Otherwise you can Ignore this file.");

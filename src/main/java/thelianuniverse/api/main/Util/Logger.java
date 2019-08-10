@@ -2,7 +2,7 @@ package thelianuniverse.api.main.Util;
 
 
 import thelianuniverse.api.ThelianUniverseAPI;
-import thelianuniverse.main.init.ThelianConfig.*;
+import thelianuniverse.main.init.ThelianConfig.Main;
 
 import org.apache.logging.log4j.Level;
 
