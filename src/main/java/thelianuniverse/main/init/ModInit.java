@@ -3,9 +3,10 @@ package thelianuniverse.main.init;
 
 public class ModInit {
 				
-				private ModInit(){
+				private ModInit() {
 				
 				}
+				
 				public static void init() {
 								ThelianConfig.init();
 								ThelianSound.init();

@@ -4,9 +4,10 @@ package thelianuniverse.main.util;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
+import thelianuniverse.api.main.item.TUItems;
+
 
 public class ItemGroupTU extends ItemGroup {
-				
 				
 				
 				private ItemGroupTU(int index, String label) {
@@ -15,7 +16,7 @@ public class ItemGroupTU extends ItemGroup {
 				
 				@Override
 				public ItemStack createIcon() {
-								return new ItemStack();
+								return new ItemStack(TUItems.logo);
 				}
 				
 				public static class ItemGroupBiology {
@@ -39,7 +40,7 @@ public class ItemGroupTU extends ItemGroup {
 								public static ItemGroupTU instance = new ItemGroupTU(ItemGroup.GROUPS.length, "Thelian Transportation");
 				}
 				
-				public static class ItemGroupMaterials{
+				public static class ItemGroupMaterials {
 								public static ItemGroupTU instance = new ItemGroupTU(ItemGroup.GROUPS.length, "Thelian Materials");
 				}
 				
@@ -51,8 +52,12 @@ public class ItemGroupTU extends ItemGroup {
 								public static ItemGroupTU instance = new ItemGroupTU(ItemGroup.GROUPS.length, "Thelian Combat");
 				}
 				
-				public static class  ItemGroupFood {
-								public static ItemGroupTU instance = new ItemGroupTU(ItemGroup.GROUPS.length, "ThelianMedicine");
+				public static class ItemGroupFood {
+								public static ItemGroupTU instance = new ItemGroupTU(ItemGroup.GROUPS.length, "Thelian Food");
+				}
+				
+				public static class ItemGroupMedcine {
+								public static ItemGroupTU instance = new ItemGroupTU(ItemGroup.GROUPS.length, "Thelian Medicine");
 				}
 				
 				public static class ItemGroupMisc {
