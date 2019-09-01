@@ -16,8 +16,11 @@ out
 # gradle
 build
 gradle
+.gradle
+gradlew
 gradlew.bat
-.gradle\bin
+gradle.properties
+settings.gradle
 
 # other
 eclipse
