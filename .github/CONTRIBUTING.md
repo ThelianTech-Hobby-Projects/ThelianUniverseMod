@@ -1,0 +1,108 @@
+### ThelianInteractive Contribution Guidelines
+===
+##### So you wanna contribute to this ThelianInteractive mod? Great, you are very welcome to do so! Just a few things before you do: We would really apreciate it if you conformed to our coding standards, as it would really easen our jobs.
+
+If you have any questions, you can hop on over to our [discord server](https://discord.gg/B3TZ2d6).
+
+Happy coding!
+
+Imports:
+---
+Please set your Imports as this:
+```java
+import java
+import static java
+//blank line
+import javax
+import static javax
+//blank line
+import net.minecraft
+import static net.minecraft
+//blank line
+import net.minecraftforge
+import static net.minecraftforge
+//blank line
+import thelianuniverse
+import static thelianuniverse
+//blank line
+import all.other.imports
+import static all.other.imports
+```
+If you are using Intellij Idea :
+Go to Settings:Editor:CodeStyle:Java:Imports:ImportLayout
+--Eclipse Path Needed--
+
+Braces:
+----
+No newlines in front of opening braces
+``` java
+public static void sendCoffeeToThelian(ThelianInteractive thelian) {
+
+    thelian.send(new Coffee());
+}
+```
+
+Spaces:
+----
+Just to be clear. This is java, not php. Please dont put spaces after, before or on top of any kinds of brackets.
+``` java
+thelian.give(new Coffee(coffees[]));
+```
+That is the *only* correct way to do that line!
+
+Also, indents are 4 spaces, not tabs! (throwinyavotes!)
+
+Other spacing rules are:
+ - required in between parameters `(a, b)`,
+ - required in between opperators and opperants (`a + b`, `a == b`)
+ - required in front of parentesis in `if`, `for` and `catch` statements
+ - required in front of opening braces for statements and methods
+ - not permitted between variable and `!` or `++`/`--`
+``` java
+public static void sendCoffeeToThelian(ThelianInteractive thelian, Coffee coffee) {
+
+    thelian.send(coffee);
+    thelian.setCoffees(thelian.getCoffees() + 1);
+    if (!thelian.wantsCoffee()) {
+      thelian.doctor.call();
+    }
+}
+```
+
+Switch statements
+----
+ - `case` statements are indented and on new lines
+ - `case` statements always end with `break;`
+ - always ends with `default;`, even if unused
+``` java
+switch (drink) {
+
+    case COFFEE:
+        drink.giveTo(thelian);
+        break;
+
+    case TEA:
+        system.crash("Are you trying to poison me?");
+        break;
+
+    default:
+        break;
+}
+```
+
+Other Characters
+----
+ - Strings are with double quotes (`"`), unless `'` is needed for escaping reasons.
+
+Naming
+----
+ - If a similar class or function to what you are adding already exists, name it with the same template.
+ - If you are overriding a method all the parameters should have the same names as the overridden methods.
+
+### Coordinates ###
+Minecraft has 3 types of coordinates, that we need to use in diffferent cases. Block coordinates, chunk coordinates,
+and coordinates to a block relative to the chunk. For example, the block at block coordinates `x = 0, y = 64, z = 20` is in the chunk at `x = 0, z = 1`, and it has the chunk-local coordinate `x = 0, y = 64, z = 4`. To make matters worse, the chunk coordinates are sometimes refered to as `x` and `y` instead of `x` and `z`. So we have a few rules about coordinate naming. These are some of the rules we consider most important, since they can really create confusion:
+ - Block coordinates should be referenced as `bx, by, bz` or simply `x, y, z`.
+ - Chunk coordinates should be referenced as `cx, cz`, _never_ `x, z`, `x, y` or even `cx, cy`.
+ - Chunk-local block coordinates should be referenced as `lx, ly, lz`, never anything else.
+ - Avoid using other names for any kind of coordinates, like `i, j, k` even in loops. If its a coordinate, give it the correct `x`, `y` or `z` and optionally some describing prefex.
