@@ -48,3 +48,4 @@ inspiration
 hs_err_pid*
 .github/CONTRIBUTING.md
 .github/ISSUE_TEMPLATE.md
+*.bin
