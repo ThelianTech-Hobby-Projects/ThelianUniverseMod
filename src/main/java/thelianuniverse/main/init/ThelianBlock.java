@@ -25,6 +25,8 @@ public class ThelianBlock {
 								
 								/*
 									 This is how we use the Blocks ItemGroup assignment system.
+									 For Blocks that have should not have an ItemGroup Use
+									 @method registerBlockNoGroup
 									 @param setItemGroup default = 5;
 									* Accepted Parameters are 0 to 5.
 									* Selecting 0 will assign the ItemGroup as Geology
@@ -32,7 +34,7 @@ public class ThelianBlock {
 									* Selecting 2 will assign the ItemGroup as Decor
 									* Selecting 3 will assign the ItemGroup as Machines
 									* Selecting 4 will assign the ItemGroup as Transportation
-									* Selecting 5 will assign the Default ItemGroup as MiscBlocks
+									* Otherwise Blocks will be Defaulted as ItemGroup MiscBlocks
 									*/
 								
 								// Lets Register Geology Blocks Here
@@ -103,9 +105,12 @@ public class ThelianBlock {
 								ore_sulfur = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "sulfer", 0);
 								ore_tin = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "cassiterite", 0);
 								ore_titanium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "rutile", 0);
+								ore_tungsten = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "", 0);
 								ore_uranium = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "uraninite", 0);
 								ore_zinc = registerBlock(new blockOre(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.0f, 1.0f).sound(SoundType.STONE)), "sphalerite", 0);
 								//Lets Register Biology Blocks Here
+								
+								
 				}
 				
 				public static ItemGroup setItemGroup() {
@@ -130,11 +135,21 @@ public class ThelianBlock {
 				public static Block registerBlock(Block b, String name, int itemGroup) {
 								
 								groupSwitch = itemGroup;
-								BlockItem i = new BlockItem(b, new Item.Properties().group(setItemGroup()));
+								BlockItem ib = new BlockItem(b, new Item.Properties().group(setItemGroup()));
 								b.setRegistryName(name);
-								i.setRegistryName(name);
+								ib.setRegistryName(name);
 								ForgeRegistries.BLOCKS.register(b);
-								ForgeRegistries.ITEMS.register(i);
+								ForgeRegistries.ITEMS.register(ib);
+								return b;
+				}
+				
+				public static Block registerBlockNoGroup(Block b, String name) {
+								
+								BlockItem ib = new BlockItem(b, new Item.Properties().group(null));
+								b.setRegistryName(name);
+								ib.setRegistryName(name);
+								ForgeRegistries.BLOCKS.register(b);
+								ForgeRegistries.ITEMS.register(ib);
 								return b;
 				}
 				
