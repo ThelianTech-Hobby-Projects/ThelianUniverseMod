@@ -7,8 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import javax.swing.text.html.HTMLDocument;
-
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
@@ -18,6 +16,7 @@ import thelianuniverse.api.main.Util.Logger;
 
 
 public class ThelianConfig {
+				
 				
 				
 				public static void init() {
@@ -48,18 +47,12 @@ public class ThelianConfig {
 								public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 								public static final ForgeConfigSpec SPEC;
 								
-								
-								
 								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianDebug;
 								
 								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianBiomes;
 								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianCrafting;
 								public static final ForgeConfigSpec.ConfigValue<Boolean> ThelianTerrian;
 							
-								
-								
-								
-								
 								
 								static {
 												

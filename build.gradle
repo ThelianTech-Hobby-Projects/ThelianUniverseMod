@@ -118,9 +118,9 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "thelianuniverse",
-            "Specification-Vendor": "thelianinteractive",
-            "Specification-Version": "00.00-prealpha.011", // We are version 1 of ourselves
+            "Specification-Title": project.name,
+            "Specification-Vendor": "${vendor}",
+            "Specification-Version": "${version}", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"${vendor}",
