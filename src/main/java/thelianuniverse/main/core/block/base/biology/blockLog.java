@@ -6,8 +6,8 @@ import net.minecraft.block.material.MaterialColor;
 
 
 public class blockLog extends LogBlock {
-				
-				public blockLog(MaterialColor materialColor, Properties properties) {
-								super(materialColor, properties);
-				}
+
+    public blockLog(MaterialColor materialColor, Properties properties) {
+        super(materialColor, properties);
+    }
 }
