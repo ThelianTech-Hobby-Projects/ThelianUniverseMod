@@ -5,6 +5,9 @@ import net.minecraft.item.Item;
 
 
 public class TUItems {
-				
-				public static Item logo;
+
+    public static Item logo;
+
+    //Metallurgy
+    public static Item ingot;
 }

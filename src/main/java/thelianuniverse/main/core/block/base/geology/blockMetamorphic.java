@@ -5,8 +5,8 @@ import net.minecraft.block.Block;
 
 
 public class blockMetamorphic extends Block {
-				
-				public blockMetamorphic(Properties properties) {
-								super(properties);
-				}
+
+    public blockMetamorphic(Properties properties) {
+        super(properties);
+    }
 }

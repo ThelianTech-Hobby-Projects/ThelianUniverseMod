@@ -5,9 +5,9 @@ import net.minecraft.block.Block;
 
 
 public class blockIgneous extends Block {
-				
-				
-				public blockIgneous(Properties properties) {
-								super(properties);
-				}
+
+
+    public blockIgneous(Properties properties) {
+        super(properties);
+    }
 }

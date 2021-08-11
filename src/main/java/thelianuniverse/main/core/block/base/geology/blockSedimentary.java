@@ -5,8 +5,8 @@ import net.minecraft.block.Block;
 
 
 public class blockSedimentary extends Block {
-				
-				public blockSedimentary(Properties properties) {
-								super(properties);
-				}
+
+    public blockSedimentary(Properties properties) {
+        super(properties);
+    }
 }
