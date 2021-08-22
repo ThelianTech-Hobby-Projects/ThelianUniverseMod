@@ -50,3 +50,4 @@ hs_err_pid*
 .github/ISSUE_TEMPLATE.md
 *.bin
 *.lock
+*.properties
