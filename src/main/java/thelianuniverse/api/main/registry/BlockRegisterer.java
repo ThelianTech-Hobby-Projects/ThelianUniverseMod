@@ -35,7 +35,7 @@ public abstract class BlockRegisterer {
     protected static Block registerBlock(Block b, String name, int itemGroup) {
 
         groupSwitch = itemGroup;
-        BlockItem ib = new BlockItem(b, new Item.Properties().group(setItemGroup()));
+        BlockItem ib = new BlockItem(b, new Item.Properties().tab(setItemGroup()));
         b.setRegistryName(name);
         ib.setRegistryName(name);
         ForgeRegistries.BLOCKS.register(b);
@@ -45,7 +45,7 @@ public abstract class BlockRegisterer {
 
     protected static Block registerBlockNoGroup(Block b, String name) {
 
-        BlockItem ib = new BlockItem(b, new Item.Properties().group(null));
+        BlockItem ib = new BlockItem(b, new Item.Properties().tab(null));
         b.setRegistryName(name);
         ib.setRegistryName(name);
         ForgeRegistries.BLOCKS.register(b);

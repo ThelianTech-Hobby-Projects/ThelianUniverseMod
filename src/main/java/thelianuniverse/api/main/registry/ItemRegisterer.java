@@ -24,7 +24,7 @@ public abstract class ItemRegisterer {
             case 3:
                 return ItemGroupTU.ItemGroupFood.instance;
             case 4:
-                return ItemGroupTU.ItemGroupMedcine.instance;
+                return ItemGroupTU.ItemGroupMedicine.instance;
             default:
                 return ItemGroupTU.ItemGroupMisc.instance;
         }
@@ -33,7 +33,7 @@ public abstract class ItemRegisterer {
     protected static Item registerItem(Item i, String name, int itemGroup) {
 
         groupSwitch = itemGroup;
-        i = new Item(new Item.Properties().group(setItemGroup()));
+        i = new Item(new Item.Properties().tab(setItemGroup()));
         i.setRegistryName(name);
         ForgeRegistries.ITEMS.register(i);
         return i;
@@ -41,7 +41,7 @@ public abstract class ItemRegisterer {
 
     protected static Item registerItemNoGroup(Item i, String name) {
 
-        i = new Item(new Item.Properties().group(null));
+        i = new Item(new Item.Properties().tab(null));
         i.setRegistryName(name);
         ForgeRegistries.ITEMS.register(i);
         return i;
