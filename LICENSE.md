@@ -1,4 +1,4 @@
-Copyright © 2024, ThelianInteractive
+Copyright © 2024, ThelianTech,ThelianInteractive
 All Rights Reserved
 
 Consent:
