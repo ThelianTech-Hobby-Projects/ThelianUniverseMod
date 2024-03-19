@@ -22,8 +22,8 @@ import static net.minecraft
 import net.minecraftforge
 import static net.minecraftforge
 //blank line
-import thelianuniverse
-import static thelianuniverse
+import com.ti.thelianuniverse
+import static com.ti.thelianuniverse
 //blank line
 import all.other.imports
 import static all.other.imports

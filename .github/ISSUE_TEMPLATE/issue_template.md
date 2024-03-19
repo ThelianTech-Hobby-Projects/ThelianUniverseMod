@@ -20,7 +20,7 @@ Before getting started, for the sake of everyone's sanity, be sure that you are 
 ##### Affected Mod Versions 
 - Forge:
 - ThelianInteractiveMod:
-- Example: thelianuniverse-<mcVersion>-<modVersion>.jar
+- Example: com.ti.thelianuniverse-<mcVersion>-<modVersion>.jar
 
 (Please list other mods and their versions if you feel they are relevant to this issue. i.e. Biomes O' Plenty)
 
