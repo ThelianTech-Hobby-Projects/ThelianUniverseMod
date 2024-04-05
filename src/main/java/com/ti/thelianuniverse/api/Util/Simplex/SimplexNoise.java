@@ -1,4 +1,4 @@
-package com.ti.thelianuniverse.api.main.Util.Simplex;
+package com.ti.thelianuniverse.api.Util.Simplex;
 
 /**
  * A speed-improved simplex noise algorithm for 2D in Java.

@@ -1,0 +1,6 @@
+{
+  "parent":"minecraft:block/cube_all",
+  "textures": {
+    "all": "thelianuniverse:block/andesite_block"
+  }
+}

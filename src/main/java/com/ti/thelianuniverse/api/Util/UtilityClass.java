@@ -1,4 +1,4 @@
-package com.ti.thelianuniverse.api.main.Util;
+package com.ti.thelianuniverse.api.Util;
 
 
 import java.lang.annotation.ElementType;

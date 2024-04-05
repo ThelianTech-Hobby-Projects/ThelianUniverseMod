@@ -1,6 +1,6 @@
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-package com.ti.thelianuniverse.api.main.Util;
+package com.ti.thelianuniverse.api.Util;
 
 
 import mcp.MethodsReturnNonnullByDefault;

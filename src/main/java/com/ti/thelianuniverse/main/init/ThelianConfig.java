@@ -5,7 +5,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLPaths;
-import com.ti.thelianuniverse.api.main.Util.Logger;
+import com.ti.thelianuniverse.api.Util.Logger;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;

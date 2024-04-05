@@ -1,16 +1,11 @@
 package com.ti.thelianuniverse.main.init;
 
 
-import net.minecraft.item.Item;
-import com.ti.thelianuniverse.api.main.registry.ItemRegisterer;
-
-import static com.ti.thelianuniverse.api.main.item.TUItems.logo;
+import com.ti.thelianuniverse.api.registry.ItemRegisterer;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ThelianItem extends ItemRegisterer {
-
-    public static void init() {
-
-        logo = registerItemNoGroup(new Item(new Item.Properties()), "logo");
-
-    }
+    public static final RegistryObject<Item> LOGO = ITEMS.register("logo",
+            () -> new Item(new Item.Properties()));
 }
